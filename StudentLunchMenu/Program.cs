@@ -1,4 +1,4 @@
-namespace WinFormsApp1
+namespace StudentLunchMenu
 {
     internal static class Program
     {
