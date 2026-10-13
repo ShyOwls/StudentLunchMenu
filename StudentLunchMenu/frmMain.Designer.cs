@@ -1,4 +1,4 @@
-﻿namespace WinFormsApp1
+﻿namespace StudentLunchMenu
 {
     partial class frmMain
     {
@@ -37,7 +37,7 @@
             this.txtStudentName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.grpMeats = new System.Windows.Forms.GroupBox();
-            this.rdoSphagetti = new System.Windows.Forms.RadioButton();
+            this.rdoSpaghetti = new System.Windows.Forms.RadioButton();
             this.rdoHotdog = new System.Windows.Forms.RadioButton();
             this.rdoHamburger = new System.Windows.Forms.RadioButton();
             this.grpVeggies = new System.Windows.Forms.GroupBox();
@@ -145,7 +145,7 @@
             // 
             // grpMeats
             // 
-            this.grpMeats.Controls.Add(this.rdoSphagetti);
+            this.grpMeats.Controls.Add(this.rdoSpaghetti);
             this.grpMeats.Controls.Add(this.rdoHotdog);
             this.grpMeats.Controls.Add(this.rdoHamburger);
             this.grpMeats.Location = new System.Drawing.Point(12, 86);
@@ -153,18 +153,18 @@
             this.grpMeats.Size = new System.Drawing.Size(308, 146);
             this.grpMeats.TabIndex = 4;
             this.grpMeats.TabStop = false;
-            this.grpMeats.Text = "Choose your Meat: ";
+            this.grpMeats.Text = "Choose your Entrée: ";
             // 
-            // rdoSphagetti
+            // rdoSpaghetti
             // 
-            this.rdoSphagetti.AutoSize = true;
-            this.rdoSphagetti.Location = new System.Drawing.Point(6, 102);
-            this.rdoSphagetti.Name = "rdoSphagetti";
-            this.rdoSphagetti.Size = new System.Drawing.Size(112, 25);
-            this.rdoSphagetti.TabIndex = 2;
-            this.rdoSphagetti.TabStop = true;
-            this.rdoSphagetti.Text = "Sphagetti";
-            this.rdoSphagetti.UseVisualStyleBackColor = true;
+            this.rdoSpaghetti.AutoSize = true;
+            this.rdoSpaghetti.Location = new System.Drawing.Point(6, 102);
+            this.rdoSpaghetti.Name = "rdoSpaghetti";
+            this.rdoSpaghetti.Size = new System.Drawing.Size(112, 25);
+            this.rdoSpaghetti.TabIndex = 2;
+            this.rdoSpaghetti.TabStop = true;
+            this.rdoSpaghetti.Text = "Spaghetti";
+            this.rdoSpaghetti.UseVisualStyleBackColor = true;
             // 
             // rdoHotdog
             // 
@@ -210,7 +210,7 @@
             this.chkPeas.TabIndex = 3;
             this.chkPeas.Text = "Peas";
             this.chkPeas.UseVisualStyleBackColor = true;
-            this.chkPeas.CheckedChanged += new System.EventHandler(this.chkCorn_CheckedChanged);
+            this.chkPeas.CheckedChanged += new System.EventHandler(this.Veggie_CheckedChanged);
             // 
             // chkBakedBeans
             // 
@@ -221,7 +221,7 @@
             this.chkBakedBeans.TabIndex = 2;
             this.chkBakedBeans.Text = "Baked Beans";
             this.chkBakedBeans.UseVisualStyleBackColor = true;
-            this.chkBakedBeans.CheckedChanged += new System.EventHandler(this.chkCorn_CheckedChanged);
+            this.chkBakedBeans.CheckedChanged += new System.EventHandler(this.Veggie_CheckedChanged);
             // 
             // chkGreenBeans
             // 
@@ -232,7 +232,7 @@
             this.chkGreenBeans.TabIndex = 1;
             this.chkGreenBeans.Text = "Green Beans";
             this.chkGreenBeans.UseVisualStyleBackColor = true;
-            this.chkGreenBeans.CheckedChanged += new System.EventHandler(this.chkCorn_CheckedChanged);
+            this.chkGreenBeans.CheckedChanged += new System.EventHandler(this.Veggie_CheckedChanged);
             // 
             // chkCorn
             // 
@@ -243,7 +243,7 @@
             this.chkCorn.TabIndex = 0;
             this.chkCorn.Text = "Corn";
             this.chkCorn.UseVisualStyleBackColor = true;
-            this.chkCorn.CheckedChanged += new System.EventHandler(this.chkCorn_CheckedChanged);
+            this.chkCorn.CheckedChanged += new System.EventHandler(this.Veggie_CheckedChanged);
             // 
             // grpDessert
             // 
@@ -320,6 +320,7 @@
             this.btnClear.TabIndex = 6;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // frmMain
             // 
@@ -336,7 +337,7 @@
             this.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "frmMain";
-            this.Text = "Form1";
+            this.Text = "Student Lunch Menu";
             this.grpDrinks.ResumeLayout(false);
             this.grpDrinks.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -361,7 +362,7 @@
         private Label label1;
         private RadioButton rdoWater;
         private GroupBox grpMeats;
-        private RadioButton rdoSphagetti;
+        private RadioButton rdoSpaghetti;
         private RadioButton rdoHotdog;
         private RadioButton rdoHamburger;
         private GroupBox grpVeggies;
